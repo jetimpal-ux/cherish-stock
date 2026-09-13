@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<title> Form Orderan Mimpi Bar</title>
+<title>📋 Form Orderan Mimpi Bar</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { font-family: 'Segoe UI', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -119,7 +119,7 @@
       <div class="flex flex-wrap gap-2">
         <button onclick="openBackupModal()" class="btn btn-rose">💾 Backup</button>
         <button onclick="printForm()" class="btn btn-primary">🖨️ Print</button>
-        <button onclick="exportCSV()" class="btn btn-success"> CSV</button>
+        <button onclick="exportCSV()" class="btn btn-success">📥 CSV</button>
       </div>
     </div>
 
@@ -127,7 +127,7 @@
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-4">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div class="flex items-center gap-2 flex-wrap">
-          <button onclick="changeDate(-1)" class="btn btn-gray btn-sm"> Kemarin</button>
+          <button onclick="changeDate(-1)" class="btn btn-gray btn-sm">◀ Kemarin</button>
           <input id="formDate" type="date" class="border rounded-lg px-3 py-2 text-sm font-bold" onchange="onDateChange()"/>
           <button onclick="changeDate(1)" class="btn btn-gray btn-sm">Besok ▶</button>
           <button onclick="goToToday()" class="btn btn-teal btn-sm">📅 Hari Ini</button>
@@ -135,7 +135,7 @@
         </div>
         <div class="flex gap-2 flex-wrap">
           <button onclick="startNewDay()" class="btn btn-purple">📅 Mulai Hari Baru (Carry Over)</button>
-          <button onclick="showHistory()" class="btn btn-warning btn-sm"> Riwayat</button>
+          <button onclick="showHistory()" class="btn btn-warning btn-sm">📋 Riwayat</button>
         </div>
       </div>
       <div id="dateInfo" class="mt-3 text-xs text-slate-600"></div>
@@ -165,7 +165,7 @@
   <!-- INFO CARRY OVER -->
   <div id="carryInfo" class="hidden bg-blue-50 border-2 border-blue-300 rounded-xl p-4 mb-4">
     <div class="flex items-start gap-3">
-      <div class="text-3xl">📥</div>
+      <div class="text-3xl"></div>
       <div class="flex-1">
         <h3 class="font-bold text-blue-900">Data dari Carry Over</h3>
         <p class="text-xs text-blue-700 mt-1">Kolom <strong>AWAL</strong> (background biru) sudah diisi otomatis dari <strong>AKHIR</strong> hari sebelumnya. Silakan isi IN dan OUT untuk hari ini.</p>
@@ -203,14 +203,14 @@
       <table class="w-full text-sm" id="tableBar">
         <thead class="bg-slate-100 sticky top-0">
           <tr>
-            <th class="p-2 text-left w-10">#</th>
+            <th class="p-2 text-center" style="width:40px;">#</th>
             <th class="p-2 text-left">NAMA BARANG</th>
-            <th class="p-2 text-right w-20">ORDER</th>
-            <th class="p-2 text-right w-20">AWAL</th>
-            <th class="p-2 text-right w-20">IN</th>
-            <th class="p-2 text-right w-20">OUT</th>
-            <th class="p-2 text-right w-24">AKHIR</th>
-            <th class="p-2 text-center w-24">AKSI</th>
+            <th class="p-2 text-center" style="width:50px;">ORD</th>
+            <th class="p-2 text-center" style="width:60px;">AWAL</th>
+            <th class="p-2 text-center" style="width:55px;">IN</th>
+            <th class="p-2 text-center" style="width:55px;">OUT</th>
+            <th class="p-2 text-center" style="width:70px;">AKHIR</th>
+            <th class="p-2 text-center" style="width:80px;">AKSI</th>
           </tr>
         </thead>
         <tbody id="tbodyBar"></tbody>
@@ -232,7 +232,7 @@
   <!-- FORM ORDERAN MIMPI KASIR -->
   <div class="bg-white rounded-xl shadow p-3 md:p-6 mb-4">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
-      <h2 class="text-lg md:text-xl font-bold text-slate-800"> Form Orderan Mimpi Kasir</h2>
+      <h2 class="text-lg md:text-xl font-bold text-slate-800">🧾 Form Orderan Mimpi Kasir</h2>
       <div class="flex gap-2 flex-wrap">
         <button onclick="openAddModal('kasir')" class="btn btn-primary btn-sm">+ Tambah Barang</button>
         <button onclick="clearSection('kasir')" class="btn btn-warning btn-sm">🗑️ Hapus Section</button>
@@ -242,14 +242,14 @@
       <table class="w-full text-sm" id="tableKasir">
         <thead class="bg-slate-100 sticky top-0">
           <tr>
-            <th class="p-2 text-left w-10">#</th>
+            <th class="p-2 text-center" style="width:40px;">#</th>
             <th class="p-2 text-left">NAMA BARANG</th>
-            <th class="p-2 text-right w-20">ORDER</th>
-            <th class="p-2 text-right w-20">AWAL</th>
-            <th class="p-2 text-right w-20">IN</th>
-            <th class="p-2 text-right w-20">OUT</th>
-            <th class="p-2 text-right w-24">AKHIR</th>
-            <th class="p-2 text-center w-24">AKSI</th>
+            <th class="p-2 text-center" style="width:50px;">ORD</th>
+            <th class="p-2 text-center" style="width:60px;">AWAL</th>
+            <th class="p-2 text-center" style="width:55px;">IN</th>
+            <th class="p-2 text-center" style="width:55px;">OUT</th>
+            <th class="p-2 text-center" style="width:70px;">AKHIR</th>
+            <th class="p-2 text-center" style="width:80px;">AKSI</th>
           </tr>
         </thead>
         <tbody id="tbodyKasir"></tbody>
@@ -338,75 +338,34 @@ function saveAll(){
 }
 
 /* ========== DAFTAR NAMA BARANG PATEN ========== */
-// Hanya berisi nama, semua nilai 0/kosong
 const DEFAULT_BAR_NAMES = [
-  'AQUA',
-  'BIR BINTANG',
-  'COCA COLA',
-  'FANTA',
-  'SPRITE',
-  'DAUN TEH',
-  'ES KRIM',
-  'GULA PACK',
-  'GULA CAIR',
-  'KOPI HITAM',
-  'KOPI SUSU SASET',
-  'KOPI GULA AREN',
-  'NUTRISARI LECI TEA',
-  'MILO SASET',
-  'NUTRISARI LECI TEA (2)',
-  'OREO 15gr',
-  'POP MIE',
-  'CUANKI',
-  'POP ICE COKLAT',
-  'POP ICE STRAWBERRY',
-  'NUTRISARI LEMON TEA',
-  'GUINNES',
-  'SKM PUTIH',
-  'SABUN LIGHT',
-  'GELAS LOFRIS',
-  'TRAY SNACK LOFRIS',
-  'CUP KOPI',
-  'SENDOK BEBEK',
-  'GELAS ES 14OZ'
+  'AQUA', 'BIR BINTANG', 'COCA COLA', 'FANTA', 'SPRITE', 'DAUN THE',
+  'ES KRIM', 'GULA PACK', 'GULA CAIR', 'KOPI HITAM', 'KOPI SUSU SASET',
+  'KOPI GULA AREN', 'NUTRISARI LECI TEA', 'MILO SASET', 'NUTRISARI LECI TEA (2)',
+  'OREO 15gr', 'POP MIE', 'CUANKI', 'POP ICE COKLAT', 'POP ICE STRAWBERRY',
+  'NUTRISARI LEMON TEA', 'GUINNES', 'SKM PUTIH', 'SABUN LIGHT', 'GELAS LOFRIS',
+  'TRAY SNACK LOFRIS', 'CUP KOPI', 'SENDOK BEBEK', 'GELAS ES 14OZ'
 ];
 
 const DEFAULT_KASIR_NAMES = [
-  'AMPLOP',
-  'KERTAS KASIR',
-  'KERTAS EDC',
-  'ISI HECTER',
-  'HANDSOAP',
-  'PORSTEK'
+  'AMPLOP', 'KERTAS KASIR', 'KERTAS EDC', 'ISI HECTER', 'HANDSOAP', 'PORSTEK'
 ];
 
-/* ========== SEED: BUAT DAFTAR BARANG KOSONG ========== */
+/* ========== SEED ========== */
 function seedDefaultItems(){
   let seeded = false;
   const data = getCurrentData();
   
-  // Seed bar jika kosong
   if (!data.bar || data.bar.length === 0) {
     data.bar = DEFAULT_BAR_NAMES.map((name, idx) => ({
-      id: idx + 1,
-      name: name,
-      order: 0,
-      awal: 0,
-      in: 0,
-      out: 0
+      id: idx + 1, name: name, order: 0, awal: 0, in: 0, out: 0
     }));
     seeded = true;
   }
   
-  // Seed kasir jika kosong
   if (!data.kasir || data.kasir.length === 0) {
     data.kasir = DEFAULT_KASIR_NAMES.map((name, idx) => ({
-      id: idx + 1,
-      name: name,
-      order: 0,
-      awal: 0,
-      in: 0,
-      out: 0
+      id: idx + 1, name: name, order: 0, awal: 0, in: 0, out: 0
     }));
     seeded = true;
   }
@@ -490,7 +449,7 @@ function updateDateInfo(){
     badge.innerHTML = '📋 Data Lama';
   } else {
     badge.className = 'date-badge empty';
-    badge.innerHTML = ' Belum Ada Data';
+    badge.innerHTML = '⭕ Belum Ada Data';
   }
 
   info.innerHTML = `<strong>${formatDateIndo(currentDate)}</strong> ${hasData ? `• ${data.bar.length} barang bar + ${data.kasir.length} barang kasir` : '• Belum ada data'}`;
@@ -509,7 +468,7 @@ function renderTable(section){
     if (!items || items.length === 0) {
       tbody.innerHTML = `<tr><td colspan="8" class="p-4 text-center text-slate-400 text-sm">
         <div class="py-4">
-          <div class="text-4xl mb-2">📭</div>
+          <div class="text-4xl mb-2"></div>
           <div class="font-bold mb-1">Belum ada barang</div>
           <div class="text-xs">Klik "+ Tambah Barang" untuk mulai</div>
         </div>
@@ -658,7 +617,7 @@ function openAddModal(section){
       </div>
       <div class="flex gap-2">
         <button onclick="closeModal()" class="btn btn-gray flex-1">Batal</button>
-        <button onclick="saveNewItem('${section}')" class="btn btn-success flex-1"> Simpan</button>
+        <button onclick="saveNewItem('${section}')" class="btn btn-success flex-1">💾 Simpan</button>
       </div>
     </div>
   `;
@@ -678,20 +637,17 @@ function openAddModal(section){
 function saveNewItem(section){
   try {
     const name = document.getElementById('new_name').value.trim().toUpperCase();
-    if (!name) { alert('️ Nama barang wajib diisi!'); return; }
+    if (!name) { alert('⚠️ Nama barang wajib diisi!'); return; }
     const data = getCurrentData();
     const items = section === 'bar' ? data.bar : data.kasir;
     items.push({
-      id: nextId(items),
-      name,
+      id: nextId(items), name,
       order: parseInputValue(document.getElementById('new_order').value),
       awal: parseInputValue(document.getElementById('new_awal').value),
       in: parseInputValue(document.getElementById('new_in').value),
       out: parseInputValue(document.getElementById('new_out').value)
     });
-    saveAll();
-    renderTable(section);
-    closeModal();
+    saveAll(); renderTable(section); closeModal();
     toast(`✅ "${name}" berhasil ditambahkan!`, 'success', 2000);
   } catch(e) { toast('❌ Error: ' + e.message, 'error'); }
 }
@@ -742,17 +698,15 @@ function saveEditItem(section, id){
     const item = items.find(x => x.id === id);
     if (!item) return;
     const name = document.getElementById('edit_name').value.trim().toUpperCase();
-    if (!name) { alert('️ Nama barang wajib diisi!'); return; }
+    if (!name) { alert('⚠️ Nama barang wajib diisi!'); return; }
     item.name = name;
     item.order = parseInputValue(document.getElementById('edit_order').value);
     item.awal = parseInputValue(document.getElementById('edit_awal').value);
     item.in = parseInputValue(document.getElementById('edit_in').value);
     item.out = parseInputValue(document.getElementById('edit_out').value);
-    saveAll();
-    renderTable(section);
-    closeModal();
+    saveAll(); renderTable(section); closeModal();
     toast(`✅ "${name}" berhasil diperbarui!`, 'success', 2000);
-  } catch(e) { toast(' Error: ' + e.message, 'error'); }
+  } catch(e) { toast('❌ Error: ' + e.message, 'error'); }
 }
 
 function deleteItem(section, id){
@@ -764,8 +718,7 @@ function deleteItem(section, id){
     if (!confirm(`Hapus "${item.name}"?`)) return;
     if (section === 'bar') data.bar = data.bar.filter(x => x.id !== id);
     else data.kasir = data.kasir.filter(x => x.id !== id);
-    saveAll();
-    renderTable(section);
+    saveAll(); renderTable(section);
     toast('🗑️ Barang dihapus', 'info');
   } catch(e) { toast('❌ Error: ' + e.message, 'error'); }
 }
@@ -777,10 +730,9 @@ function clearSection(section){
     if (!items || items.length === 0) { toast('Tidak ada data', 'info'); return; }
     const name = section === 'bar' ? 'Mimpi Bar' : 'Mimpi Kasir';
     if (!confirm(`⚠️ Hapus SEMUA barang di ${name} untuk ${formatDateIndo(currentDate)}?`)) return;
-    if (!confirm(`🔴 KONFIRMASI AKHIR`)) return;
+    if (!confirm(` KONFIRMASI AKHIR`)) return;
     if (section === 'bar') data.bar = []; else data.kasir = [];
-    saveAll();
-    renderTable(section);
+    saveAll(); renderTable(section);
     toast(`🗑️ Semua data ${name} dihapus`, 'warning', 4000);
   } catch(e) { toast('❌ Error: ' + e.message, 'error'); }
 }
@@ -819,9 +771,7 @@ function startNewDay(){
   allData[tomorrowStr] = newData;
   currentDate = tomorrowStr;
   document.getElementById('formDate').value = currentDate;
-  saveAll();
-  renderTable('bar');
-  renderTable('kasir');
+  saveAll(); renderTable('bar'); renderTable('kasir');
 
   document.getElementById('carryInfo').classList.remove('hidden');
   setTimeout(() => {
@@ -848,7 +798,7 @@ function showHistory(){
           <div class="flex items-center justify-between gap-2 flex-wrap">
             <div class="flex-1 min-w-0">
               <div class="font-bold text-sm">${formatDateIndo(date)} ${isCurrent ? '<span class="text-blue-600">(Aktif)</span>' : ''}</div>
-              <div class="text-xs text-slate-500 mt-1">🍺 ${(data.bar||[]).length} barang bar • 🧾 ${(data.kasir||[]).length} barang kasir • <strong class="text-amber-700">Total AKHIR: ${totalAkhir}</strong></div>
+              <div class="text-xs text-slate-500 mt-1"> ${(data.bar||[]).length} barang bar • 🧾 ${(data.kasir||[]).length} barang kasir • <strong class="text-amber-700">Total AKHIR: ${totalAkhir}</strong></div>
             </div>
             <div class="flex gap-1 flex-wrap">
               <button onclick="loadHistoryDate('${date}')" class="btn btn-primary btn-sm">📂 Buka</button>
@@ -869,15 +819,13 @@ function showHistory(){
 function loadHistoryDate(date){
   currentDate = date;
   document.getElementById('formDate').value = currentDate;
-  closeHistoryModal();
-  onDateChange();
-  toast(`📂 Data ${formatDateIndo(date)} dimuat`, 'info', 2000);
+  closeHistoryModal(); onDateChange();
+  toast(` Data ${formatDateIndo(date)} dimuat`, 'info', 2000);
 }
 
 function printHistoryDate(date){
   const savedCurrent = currentDate;
-  currentDate = date;
-  printForm();
+  currentDate = date; printForm();
   currentDate = savedCurrent;
 }
 
@@ -885,9 +833,7 @@ function deleteHistoryDate(date){
   if (date === currentDate) { alert('⚠️ Tidak bisa hapus tanggal yang sedang aktif!'); return; }
   if (!confirm(`🗑️ Hapus data ${formatDateIndo(date)}?`)) return;
   if (!confirm(`🔴 KONFIRMASI AKHIR`)) return;
-  delete allData[date];
-  saveAll();
-  showHistory();
+  delete allData[date]; saveAll(); showHistory();
   toast('🗑️ Riwayat dihapus', 'info');
 }
 
@@ -906,7 +852,7 @@ function openBackupModal(){
     return acc + (d.bar||[]).length + (d.kasir||[]).length;
   }, 0);
   
-  document.getElementById('modalTitle').textContent = ' Backup & Restore Data';
+  document.getElementById('modalTitle').textContent = '💾 Backup & Restore Data';
   document.getElementById('modalBody').innerHTML = `
     <div class="space-y-4">
       <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
@@ -925,7 +871,7 @@ function openBackupModal(){
         <p class="text-sm font-bold mb-2">📥 Restore dari Backup</p>
         <p class="text-xs text-slate-500 mb-2">Upload file backup untuk pulihkan data. Data saat ini akan ditimpa.</p>
         <div id="dropZone" class="drop-zone rounded-lg p-6 text-center cursor-pointer hover:bg-slate-50">
-          <div class="text-4xl mb-2"></div>
+          <div class="text-4xl mb-2">📁</div>
           <p class="text-sm font-bold text-slate-700">Tap untuk pilih file</p>
           <p class="text-xs text-slate-500 mt-1">atau drag & drop file .json</p>
           <input type="file" id="fileInput" accept=".json,application/json" class="hidden"/>
@@ -934,8 +880,8 @@ function openBackupModal(){
       </div>
 
       <div class="border-t pt-3">
-        <p class="text-sm font-bold mb-2 text-red-600">️ Zona Bahaya</p>
-        <button onclick="resetAll()" class="w-full bg-red-50 text-red-600 py-2 rounded-lg hover:bg-red-100 text-sm">🗑️ Hapus Semua Data</button>
+        <p class="text-sm font-bold mb-2 text-red-600">⚠️ Zona Bahaya</p>
+        <button onclick="resetAll()" class="w-full bg-red-50 text-red-600 py-2 rounded-lg hover:bg-red-100 text-sm">️ Hapus Semua Data</button>
       </div>
 
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800">
@@ -1014,11 +960,8 @@ function importBackup(jsonString, fileName){
 
     if (!confirm(`⚠️ PERINGATAN!\n\nFile: ${fileName}\nTanggal backup: ${new Date(data.exportedAt).toLocaleString('id-ID')}\nJumlah tanggal: ${dates.length}\n\nSemua data saat ini akan DIGANTI.\n\nLanjutkan?`)) return;
     
-    allData = data.data;
-    saveAll();
-    renderTable('bar');
-    renderTable('kasir');
-    closeModal();
+    allData = data.data; saveAll();
+    renderTable('bar'); renderTable('kasir'); closeModal();
     toast(`✅ Data berhasil dipulihkan dari ${fileName}`, 'success', 4000);
   } catch(e) { toast('❌ Gagal: ' + e.message, 'error', 5000); }
 }
@@ -1034,18 +977,14 @@ function printForm(){
       if (!items || items.length === 0) return `<h2 style="text-align:center; margin: 20px 0 10px 0; font-size: 16px; text-decoration: underline;">${title}</h2><p style="text-align:center; color:#666;">Tidak ada data</p>`;
       const rows = items.map((item, idx) => {
         const akhir = calcAkhir(item);
-        const orderVal = item.order ? item.order : '';
-        const awalVal = item.awal ? item.awal : '';
-        const inVal = item.in ? item.in : '';
-        const outVal = item.out ? item.out : '';
         return `<tr>
-          <td class="border border-black px-2 py-1">${idx+1}</td>
+          <td class="border border-black px-2 py-1" style="width:30px;">${idx+1}</td>
           <td class="border border-black px-2 py-1 font-semibold">${item.name || '-'}</td>
-          <td class="border border-black px-2 py-1 text-right">${orderVal}</td>
-          <td class="border border-black px-2 py-1 text-right">${awalVal}</td>
-          <td class="border border-black px-2 py-1 text-right">${inVal}</td>
-          <td class="border border-black px-2 py-1 text-right">${outVal}</td>
-          <td class="border border-black px-2 py-1 text-right font-bold">${akhir}</td>
+          <td class="border border-black px-2 py-1 text-right" style="width:50px;">${item.order ? item.order : ''}</td>
+          <td class="border border-black px-2 py-1 text-right" style="width:60px;">${item.awal ? item.awal : ''}</td>
+          <td class="border border-black px-2 py-1 text-right" style="width:55px;">${item.in ? item.in : ''}</td>
+          <td class="border border-black px-2 py-1 text-right" style="width:55px;">${item.out ? item.out : ''}</td>
+          <td class="border border-black px-2 py-1 text-right font-bold" style="width:70px;">${akhir}</td>
         </tr>`;
       }).join('');
 
@@ -1061,11 +1000,11 @@ function printForm(){
           <thead><tr style="background: #f0f0f0;">
             <th class="border border-black px-2 py-1" style="width:30px;">#</th>
             <th class="border border-black px-2 py-1">NAMA BARANG</th>
-            <th class="border border-black px-2 py-1" style="width:70px;">ORDER</th>
-            <th class="border border-black px-2 py-1" style="width:70px;">AWAL</th>
-            <th class="border border-black px-2 py-1" style="width:70px;">IN</th>
-            <th class="border border-black px-2 py-1" style="width:70px;">OUT</th>
-            <th class="border border-black px-2 py-1" style="width:80px;">AKHIR</th>
+            <th class="border border-black px-2 py-1" style="width:50px;">ORD</th>
+            <th class="border border-black px-2 py-1" style="width:60px;">AWAL</th>
+            <th class="border border-black px-2 py-1" style="width:55px;">IN</th>
+            <th class="border border-black px-2 py-1" style="width:55px;">OUT</th>
+            <th class="border border-black px-2 py-1" style="width:70px;">AKHIR</th>
           </tr></thead>
           <tbody>${rows}</tbody>
           <tfoot><tr style="background: #f0f0f0; font-weight: bold;">
@@ -1127,14 +1066,14 @@ function exportCSV(){
     a.download = `orderan-mimpi-bar-${dateStr}.csv`;
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
-    toast('📥 CSV berhasil diunduh', 'success');
+    toast(' CSV berhasil diunduh', 'success');
   } catch(e) { toast('❌ Error: ' + e.message, 'error'); }
 }
 
 /* ========== RESET ========== */
 function resetAll(){
   if (!confirm('⚠️ Hapus SEMUA data (semua tanggal)?')) return;
-  if (!confirm(' KONFIRMASI AKHIR - Semua riwayat akan hilang!')) return;
+  if (!confirm('🔴 KONFIRMASI AKHIR - Semua riwayat akan hilang!')) return;
   localStorage.clear();
   location.reload();
 }
